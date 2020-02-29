@@ -68,8 +68,6 @@ public class CodeGenerator {
         pc.setModuleName("PMS");
         pc.setParent("com");
         pc.setService("service");
-        pc.setServiceImpl("service.impl");
-        pc.setXml("mapper.xml");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -110,7 +108,7 @@ public class CodeGenerator {
         mpg.setCfg(cfg);
 
         // 配置模板
-     // TemplateConfig templateConfig = new TemplateConfig();
+      TemplateConfig templateConfig = new TemplateConfig();
 
         // 配置自定义输出模板
         //指定自定义模板路径，注意不要带上.ftl/.vm, 会根据使用的模板引擎自动识别
@@ -118,8 +116,8 @@ public class CodeGenerator {
         // templateConfig.setService();
         // templateConfig.setController();
 
-     //   templateConfig.setXml(null);
-     //   mpg.setTemplate(templateConfig);
+        templateConfig.setXml(null);
+        mpg.setTemplate(templateConfig);
 
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
@@ -135,6 +133,8 @@ public class CodeGenerator {
         // strategy.setSuperEntityColumns("id");
         strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
         strategy.setControllerMappingHyphenStyle(true);
+        
+        //表前缀取消
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());

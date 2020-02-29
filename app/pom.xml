@@ -114,7 +114,9 @@
     	<groupId>com.ibeetl</groupId>
     	<artifactId>beetl</artifactId>
     	<version>3.0.19.RELEASE</version>
-	</dependency>
+	</dependency>	
+
+	
 	
 	</dependencies>
 
