@@ -1,6 +1,6 @@
 package com.PMS.mapper;
 
-import com.PMS.entity.Admin;
+import com.PMS.entity.Machine;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author jianan
  * @since 2020-02-29
  */
-public interface AdminMapper extends BaseMapper<Admin> {
+public interface MachineMapper extends BaseMapper<Machine> {
 
 }

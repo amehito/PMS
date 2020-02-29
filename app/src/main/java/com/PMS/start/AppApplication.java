@@ -1,4 +1,4 @@
-package com.PMS;
+package com.PMS.start;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

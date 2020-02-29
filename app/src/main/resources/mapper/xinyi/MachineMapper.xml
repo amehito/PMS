@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.PMS.ant.xinyi.mapper.MachineMapper">
+
+#if(FreeMarker template error (DEBUG mode; use RETHROW in production!):
+Can't convert boolean to string automatically, because the "boolean_format" setting was "true,false", which is the legacy deprecated default, and we treat it as if no format was set. This is the default configuration; you should provide the format explicitly for each place where you print a boolean.
+
+----
+Tip: Write something like myBool?string('yes', 'no') to specify boolean formatting in place.
+----
+Tip: If you want "true"/"false" result as you are generating computer-language output (not for direct human consumption), then use "?c", like ${myBool?c}. (If you always generate computer-language output, then it's might be reasonable to set the "boolean_format" setting to "c" instead.)
+----
+Tip: If you need the same two values on most places, the programmers can set the "boolean_format" setting to something like "yes,no". However, then it will be easy to unwillingly format booleans like that.
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${enableCache}  [in template "templates/mapper.xml.vm" at line 5, column 5]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core._MiscTemplateException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.Configurable.formatBoolean(Configurable.java:1043)
+	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:493)
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401)
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370)
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63)
+	at freemarker.core.Environment.visit(Environment.java:331)
+	at freemarker.core.Environment.visit(Environment.java:337)
+	at freemarker.core.Environment.process(Environment.java:310)
+	at freemarker.template.Template.process(Template.java:383)
+	at com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine.writer(FreemarkerTemplateEngine.java:52)
+	at com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine.batchOutput(AbstractTemplateEngine.java:81)
+	at com.baomidou.mybatisplus.generator.AutoGenerator.execute(AutoGenerator.java:103)
+	at com.PMS.util.CodeGenerator.main(CodeGenerator.java:136)
